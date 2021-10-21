@@ -90,28 +90,102 @@ img {
   margin: 0.4rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 200px) {
+  section {
+    display: flex;
+    flex-wrap: wrap;
+  }
   li {
     margin-right: 3rem;
   }
-}
-
-@media (min-width: 764px) {
-  li {
-    margin-right: 4rem;
-  }
   .alCinema {
     flex-basis: 30rem;
     margin: 0.5rem;
   }
+  .cartoons {
+    display: none;
+  }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 500px) {
   li {
-    margin-right: 7rem;
+    margin-right: 3rem;
+  }
+  section {
+    display: flex;
+    flex-wrap: wrap;
   }
   .alCinema {
-    flex-basis: 30rem;
+    flex-basis: 50rem;
+    margin: 0.5rem;
+  }
+
+  @media (min-width: 764px) {
+    li {
+      margin-right: 4rem;
+    }
+    .alCinema {
+      flex-basis: 60rem;
+      margin: 0.5rem;
+    }
+    section {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: 900px) {
+    li {
+      margin-right: 7rem;
+    }
+    .alCinema {
+      flex-basis: 17rem;
+      margin: 0.5rem;
+    }
+    .netflix {
+      flex-basis: 27rem;
+      margin: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .alCinema {
+    flex-basis: 21rem;
     margin: 0.5rem;
   }
 }
+
+@media (min-width: 1100px) {
+
+
+  .alCinema {
+    flex-basis: 21rem;
+    margin: 0.5rem;
+  }
+  .netflix {
+    flex-basis: 20rem;
+    margin: 0.5rem;
+  }
+}
+@media (min-width: 1300px) {
+
+      .alCinema {
+        flex-basis: 12rem;
+        margin: 0.5rem;
+      
+      }
+    }
+
+
+    @media (min-width: 1800px) {
+        .alCinema {
+            flex-basis:18rem;
+            margin: 0.5rem;
+          
+          }
+          .netflix {
+            flex-basis: 22rem;
+            margin: 0.5rem;
+          }
+        }
