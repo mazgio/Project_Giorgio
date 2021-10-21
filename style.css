@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+html{
+    font-family: 'Cinzel', serif;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.952);
+}
+
+header{
+    min-height: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(204, 204, 204)
+
+    
+}
+
+nav{
+    list-style-type: none;
+    text-align: justify;
+    padding: 1%;
+    
+    
+}
+
+.contact{
+    display: none;
+}
+
+
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav li
+{
+    list-style-type: none;
+    display: inline;
+   
+}  
+
+li{
+    margin-right: 10px;
+    display:flex;
+    align-items: center;
+   
+    
+}
+
+.social{
+    width:20vw;
+    margin-right:1rem;
+    display: flex;
+    justify-content:space-between;
+    justify-content: space-around;
+    align-items:center ;
+}
+
+.fab{
+    width: 0.2rem;    
+}
+
+img{
+    object-fit: cover;
+    width:100%;
+}
+
+.proxCinema{
+    border:1px solid black;
+    display: flex;
+  
+}
+
+.alCinema{
+    flex-basis:15rem;
+    margin: 0.5rem;
+    
+}
+
+.nowCinema{
+    border:1px solid black;
+    display: flex;
+}
+
+.series{
+    border:1px solid black;
+    display: flex;
+}
+
+.netflix{
+    flex-basis: 50rem;
+    margin: 0.4rem;
+}
+
+@media(min-width: 600px) {
+    li{
+        margin-right: 3rem;
+    
+    }
+}
+
+@media(min-width: 764px) { 
+    li{margin-right: 4rem;
+    }
+    .alCinema {
+        flex-basis: 30rem;
+        margin: 0.5rem;
+    }
+}
+
+@media (min-width: 900px) {
+    li{
+        margin-right: 7rem;
+    }
+    .alCinema {
+        flex-basis: 30rem;
+        margin: 0.5rem;
+    }
+
+}
+
+
+
+
+
