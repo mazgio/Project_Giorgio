@@ -347,6 +347,13 @@ img {
 }
 
 @media (min-width: 200px) {
+  .fab {
+    padding: 10px;
+    text-decoration: none;
+    margin: 5px 10px;
+    
+  }
+
   section {
     display: flex;
     flex-wrap: wrap;
