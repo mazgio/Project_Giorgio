@@ -347,6 +347,19 @@ img {
 }
 
 @media (min-width: 200px) {
+  .social {
+    margin-top: 1itrem;
+    margin-left: 7rem;
+    
+  }
+
+  .fab {
+    padding: 10px;
+    text-decoration: none;
+    margin: 5px 10px;
+    
+  }
+
   section {
     display: flex;
     flex-wrap: wrap;
