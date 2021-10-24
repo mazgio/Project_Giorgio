@@ -213,7 +213,6 @@ body {
   text-decoration: none;
   margin: 5px 2px;
   border-radius: 10px;
-  
 }
 
 .fa:hover {
@@ -319,7 +318,7 @@ img {
   }
   .social {
     margin-top: 1rem;
-    margin-left:0.5rem;
+    margin-left: 0.5rem;
   }
 
   .fab {
@@ -353,14 +352,14 @@ img {
     white-space: nowrap;
     overflow: hidden;
   }
-section {
-  display: flex;
-  flex-wrap: wrap;
-}
-*/ .alCinema {
-  flex-basis: 50rem;
-  margin: 0.5rem;
-}
+  section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  */ .alCinema {
+    flex-basis: 50rem;
+    margin: 0.5rem;
+  }
 }
 @media (min-width: 634px) {
   li {
@@ -406,9 +405,8 @@ section {
   }
   .social {
     margin-top: 1rem;
-    margin-left:1.4rem;
+    margin-left: 1.4rem;
   }
-
 
   main {
     margin-left: 35px;
@@ -448,4 +446,3 @@ section {
     margin: 0.5rem;
   }
 }
-
