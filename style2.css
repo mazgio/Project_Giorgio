@@ -205,14 +205,15 @@ body {
 }
 
 .social {
-  width: 5rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
 }
 
 .fab {
   padding: 10px;
   text-decoration: none;
   margin: 5px 2px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .fa:hover {
@@ -228,31 +229,26 @@ a:hover.fab {
 .fa-facebook {
   background: #3b5998;
   color: white;
-  font-size: 30px;
 }
 
 .fa-twitter {
   background: #55acee;
   color: white;
-  font-size: 30px;
 }
 
 .fa-google {
   background: #dd4b39;
   color: white;
-  font-size: 30px;
 }
 
 .fa-linkedin {
   background: #007bb5;
   color: white;
-  font-size: 30px;
 }
 
 .fa-youtube {
   background: #bb0000;
   color: white;
-  font-size: 30px;
 }
 
 .fa-instagram {
@@ -265,37 +261,117 @@ a:hover.fab {
     #d6249f 60%,
     #285aeb 90%
   );
-  font-size: 30px;
 }
 
-img {
-  object-fit: cover;
-  width: 100%;
-}
-
-.proxCinema {
-  border: 1px solid black;
+.container,
+.form {
   display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.form {
+  background-color: rgba(255, 255, 255, 0.842);
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  width: 50%;
 }
 
-.alCinema {
-  flex-basis: 15rem;
+.fields {
   margin: 0.5rem;
-}
-
-.nowCinema {
-  border: 1px solid black;
   display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 60%;
 }
 
-.series {
-  border: 1px solid black;
+input,
+textarea {
+  margin: 0.5rem 0;
+  padding: 0.1rem;
+  outline: 1px solid black;
+  max-height: 100px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* input on focus */
+input[type="text"]:focus {
+  outline: 1px solid hotpink;
+}
+input[type="email"]:focus,
+textarea:focus {
+  outline: 1px solid blue;
+}
+
+/* submit */
+input[type="submit"] {
+  background-color: white;
+  margin-top: 1rem;
+  width: 5rem;
+  color: red;
+  /* outline: 1px solid rgb(19, 18, 18); */
+}
+.submit:hover input {
+  color: blue;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+  margin-left: 1rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* slider container */
+.toggle {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.netflix {
-  flex-basis: 50rem;
-  margin: 0.4rem;
+/* slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 50rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 100%;
+}
+
+input:checked + .slider {
+  background-color: blue;
+}
+
+input:checked + .slider:before {
+  transform: translateX(2rem);
 }
 
 @media (min-width: 200px) {
@@ -316,6 +392,28 @@ img {
     font-size: 1rem;
     padding: 0.5rem;
   }
+  .switch {
+    position: relative;
+    width: 2.5rem;
+    height: 1rem;
+    margin-left: 1rem;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 0.8rem;
+    width: 0.8rem;
+    left: 0.2rem;
+    bottom: 0.1rem;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 100%;
+  }
+  input:checked + .slider:before {
+    transform: translateX(1.3rem);
+  }
+
   .social {
     margin-top: 1rem;
     margin-left: 0.5rem;
@@ -331,10 +429,15 @@ img {
     display: flex;
     flex-wrap: wrap;
   }
-
-  .alCinema {
-    flex-basis: 30rem;
-    margin: 0.5rem;
+  .form {
+    background-color: rgba(255, 255, 255, 0.842);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    margin-right: 3px;
+    width: 80%;
   }
   .cartoons {
     display: none;
@@ -342,6 +445,40 @@ img {
 }
 
 @media (min-width: 500px) {
+  .form {
+    background-color: rgba(255, 255, 255, 0.842);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-right: 13px;
+    width: 80%;
+ }
+    .switch {
+      position: relative;
+      width: 4rem;
+      height: 2rem;
+      margin-left: 1rem;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 1rem;
+      width: 1rem;
+      left: 0.5rem;
+      bottom: 0.5rem;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 100%;
+    }
+    input:checked + .slider {
+      background-color: blue;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(2rem);
+    }
+ 
   .box .inner {
     width: 400px;
     height: 200px;
@@ -352,47 +489,24 @@ img {
     white-space: nowrap;
     overflow: hidden;
   }
-  section {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  */ .alCinema {
-    flex-basis: 50rem;
-    margin: 0.5rem;
-  }
 }
 @media (min-width: 634px) {
   li {
     margin-right: 4rem;
   }
-  .alCinema {
-    flex-basis: 60rem;
-    margin: 0.5rem;
-  }
-  section {
-    display: flex;
-    flex-wrap: wrap;
-  }
 }
 
 @media (min-width: 960px) {
+  .form {
+    background-color: rgba(255, 255, 255, 0.842);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    width: 80%;
+  }
   main {
     margin-left: 40px;
-  }
-  .alCinema {
-    flex-basis: 20rem;
-    margin: 0.5rem;
-  }
-  .netflix {
-    flex-basis: 27rem;
-    margin: 0.5rem;
-  }
-}
-
-@media (min-width: 1026px) {
-  .alCinema {
-    flex-basis: 21rem;
-    margin: 0.5rem;
   }
 }
 
@@ -407,42 +521,48 @@ img {
     margin-top: 1rem;
     margin-left: 1.4rem;
   }
+  .form {
+    background-color: rgba(255, 255, 255, 0.842);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    width: 80%;
+  }
 
   main {
     margin-left: 35px;
   }
-  .alCinema {
-    flex-basis: 21rem;
-    margin: 0.5rem;
-  }
-  .netflix {
-    flex-basis: 20rem;
-    margin: 0.5rem;
-  }
 }
 @media (min-width: 1300px) {
+  .form {
+    background-color: rgba(255, 255, 255, 0.842);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    width: 70%;
+  }
+
   main {
     margin-left: 40px;
-  }
-  .alCinema {
-    flex-basis: 12rem;
-    margin: 0.5rem;
   }
 }
 
 @media (min-width: 1800px) {
+  .form {
+    background-color: rgba(255, 255, 255, 0.842);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+
+    width: 50%;
+  }
   .social {
     margin-top: 1rem;
   }
   main {
     margin-left: 20px;
-  }
-  .alCinema {
-    flex-basis: 18rem;
-    margin: 0.5rem;
-  }
-  .netflix {
-    flex-basis: 22rem;
-    margin: 0.5rem;
   }
 }
